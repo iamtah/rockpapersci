@@ -25,7 +25,6 @@ function gameRound(){
     result = 0; // i used ternary operator for practising.
     return result;
 }
-gameRound()
 
 
 function game(){
