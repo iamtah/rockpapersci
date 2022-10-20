@@ -10,12 +10,14 @@ function getComputerChoice(){
             return "scissors";
     }
 }
-let playerselection =prompt("Rock , Paper , Scissors ?");
-let result = 2;
-function gameRound(playerselection){
-    let compChoice = getComputerChoice(); 
+
+let result, layerselection;
+function gameRound(){
+    let compChoice = getComputerChoice();
+    playerselection =prompt("Rock , Paper , Scissors ?");
     if( compChoice === playerselection){
-        return 2;
+        result = 3;
+        return result;
     }
     compChoice === "rock" && playerselection === "paper" ?  result = 1:
     compChoice === "paper"  && playerselection === "scissors" ? result= 1 : 
@@ -23,10 +25,11 @@ function gameRound(playerselection){
     result = 0; // i used ternary operator for practising.
     return result;
 }
-
+gameRound()
 
 
 function game(){
+    
     for(i=0; i<5; i++){
     gameRound();
     if (result === 0){
@@ -40,4 +43,4 @@ function game(){
     }
     }
 }
-game();
+game(); 
